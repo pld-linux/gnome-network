@@ -6,7 +6,7 @@ Summary(ru):	GNOME - программы работы с сетью
 Summary(uk):	GNOME - програми роботи з мережею
 Name:		gnome-network
 Version:	1.99.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/1.99/%{name}-%{version}.tar.bz2
@@ -18,6 +18,13 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libglade2-devel
 BuildRequires:	libgnomeui-devel >= 2.3.7
+Requires:	vnc-client
+Requires:	ssh-clients
+Requires:	bind-utils
+Requires:	bsd-finger
+Requires:	net-tools
+Requires:	iputils
+Requires:	telnet
 Obsoletes:	gnome
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
