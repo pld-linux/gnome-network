@@ -68,7 +68,7 @@ configurar.
 OBJC="%{__cc}"; export OBJC
 install /usr/share/automake/config.* .
 %{__gettextize}
-aclocal -I macros
+%{__aclocal} -I macros
 #autoconf
 #automake -a -c
 %configure2_13
