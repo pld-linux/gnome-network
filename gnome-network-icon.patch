@@ -1,4 +1,4 @@
-diff -Nuard gnome-network-1.99.4.origa/desktop/preferences/interface.c gnome-network-1.99.4/desktop/preferences/interface.c
+diff -Nuard gnome-network-1.99.4.orig/desktop/preferences/interface.c gnome-network-1.99.4/desktop/preferences/interface.c
 --- gnome-network-1.99.4.orig/desktop/preferences/interface.c	2003-10-28 12:22:22.000000000 +0100
 +++ gnome-network-1.99.4/desktop/preferences/interface.c	2003-11-26 23:51:20.103992120 +0100
 @@ -84,7 +84,7 @@

@@ -1,5 +1,5 @@
-diff -Nuard gnome-network-1.99.4.origa/po/gnome-network.pot gnome-network-1.99.4/po/gnome-network.pot
---- gnome-network-1.99.4.origa/po/gnome-network.pot	2003-11-25 16:59:39.000000000 +0100
+diff -Nuard gnome-network-1.99.4.orig/po/gnome-network.pot gnome-network-1.99.4/po/gnome-network.pot
+--- gnome-network-1.99.4.orig/po/gnome-network.pot	2003-11-25 16:59:39.000000000 +0100
 +++ gnome-network-1.99.4/po/gnome-network.pot	2003-11-27 00:14:00.000000000 +0100
 @@ -8,7 +8,7 @@
  msgstr ""
