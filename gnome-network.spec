@@ -9,7 +9,7 @@ Version:	1.99.2
 Release:	4
 License:	GPL
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/1.99/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-network/1.99/%{name}-%{version}.tar.bz2
 # Source0-md5:	ba71a10c0606379ac80d1d0a24555a41
 Patch0:		%{name}-no_zvt.patch
 Patch1:		%{name}-help-button.patch
@@ -77,7 +77,6 @@ GNOME - програми роботи з мережею.
 mv -f po/{no,nb}.po
 
 %build
-rm -rf missing
 glib-gettextize --copy --force
 %{__aclocal}
 %{__autoconf}
