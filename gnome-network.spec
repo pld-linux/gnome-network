@@ -21,9 +21,9 @@ BuildRequires:	GConf2-devel >= 2.4.0
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gnome-common
-BuildRequires:	gnome-panel-devel >= 2.4.0
-BuildRequires:	libglade2-devel >= 2.0.1
-BuildRequires:	libgnomeui-devel >= 2.4.0
+BuildRequires:	gnome-panel-devel >= 2.5.1
+BuildRequires:	libglade2-devel >= 2.3.1
+BuildRequires:	libgnomeui-devel >= 2.5.1
 BuildRequires:	libvncserver-devel >= 0.6
 #Requires:	bind-utils
 #Requires:	bsd-finger
