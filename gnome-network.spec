@@ -6,7 +6,7 @@ Summary(ru):	GNOME - программы работы с сетью
 Summary(uk):	GNOME - програми роботи з мережею
 Name:		gnome-network
 Version:	1.99.2
-Release:	5
+Release:	6
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-network/1.99/%{name}-%{version}.tar.bz2
@@ -25,7 +25,7 @@ BuildRequires:	automake
 BuildRequires:	gnome-common >= 2.8.0
 BuildRequires:	gnome-panel-devel >= 2.4.0
 BuildRequires:	libglade2-devel
-BuildRequires:	libgnomeui-devel >= 2.4.0
+BuildRequires:	libgnomeui-devel >= 2.10.0-2
 #Requires:	bind-utils
 #Requires:	bsd-finger
 #Requires:	iputils
