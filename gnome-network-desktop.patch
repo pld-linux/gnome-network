@@ -70,7 +70,7 @@ diff -ur gnome-network-1.0.2.orig/gnome-ppp/gnome-ppp-applet/ppp-applet.desktop 
 +Comment[ko]=PPP 걸기
  Comment[nl]=PPP connector
 +Comment[no]=Program for PPP-oppringing
-+Comment[pl]=Obsługa połaczenia PPP
++Comment[pl]=Obsługa połączenia PPP
 +Comment[pt]=Efectua uma ligação PPP
  Exec=ppp_applet --activate-goad-server=PPP_Applet
  Icon=
@@ -91,7 +91,7 @@ diff -ur gnome-network-1.0.2.orig/gnome-ppp/gnome-ppp.desktop gnome-network-1.0.
 -Name[pt]=Utilit�rio para efectuar liga��es PPP
 +Name[ko]=PPP 걸기
 +Name[no]=PPP-oppringingsverktøy
-+Name[pl]=Program do ��czno�ci PPP
++Name[pl]=Program do łączności PPP
 +Name[pt]=Utilitário para efectuar ligações PPP
  Name[wa]=Raloyaedje PPP
  Comment=GNOME PPP dialup utility
@@ -105,7 +105,7 @@ diff -ur gnome-network-1.0.2.orig/gnome-ppp/gnome-ppp.desktop gnome-network-1.0.
 -Comment[wa]=Usteye di GNOME po si raloy� al rantoele daegnrece avou PPP
 +Comment[ko]=그놈 PPP 전화걸기 프로그램
 +Comment[no]=Verktøy for oppretting av PPP-forbindelser
-+Comment[pl]=Program do ��czno�ci PPP dla GNOME
++Comment[pl]=Program do łączności PPP dla GNOME
 +Comment[pt]=Utilitário GNOME para efectuar ligações PPP
 +Comment[wa]=Usteye di GNOME po si raloyî al rantoele daegnrece avou PPP
  Exec=gnome-ppp
