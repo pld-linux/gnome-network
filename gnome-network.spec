@@ -17,6 +17,7 @@ Icon:		gnome-network.xpm
 BuildRequires:	GConf2-devel >= 2.4.0
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gnome-common
 BuildRequires:	gnome-panel-devel >= 2.4.0
 BuildRequires:	libglade2-devel
 BuildRequires:	libgnomeui-devel >= 2.4.0
