@@ -1,0 +1,12 @@
+diff -Nuard gnome-network-1.99.4.origa/desktop/preferences/interface.c gnome-network-1.99.4/desktop/preferences/interface.c
+--- gnome-network-1.99.4.orig/desktop/preferences/interface.c	2003-10-28 12:22:22.000000000 +0100
++++ gnome-network-1.99.4/desktop/preferences/interface.c	2003-11-26 23:51:20.103992120 +0100
+@@ -84,7 +84,7 @@
+   gtk_label_set_line_wrap (GTK_LABEL (label2), TRUE);
+   gtk_misc_set_alignment (GTK_MISC (label2), 0, 0.5);
+ 
+-  image1 = create_pixmap (window1, "rdesktop/gnome-session.png");
++  image1 = create_pixmap (window1, "gnome-session.png");
+   gtk_widget_show (image1);
+   gtk_table_attach (GTK_TABLE (table1), image1, 0, 1, 1, 2,
+                     (GtkAttachOptions) (GTK_FILL),
