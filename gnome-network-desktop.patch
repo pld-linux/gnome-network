@@ -1,11 +1,12 @@
 --- gnome-network-1.99.2/desktop/client/gnome-remote-desktop.desktop.in~	Tue Jul 27 20:58:25 2004
 +++ gnome-network-1.99.2/desktop/client/gnome-remote-desktop.desktop.in	Tue Jul 27 20:58:25 2004
-@@ -8,7 +8,7 @@
+@@ -8,7 +8,8 @@
  Type=Application
  Version=1.0
  Actions=Full;
 -Categories=Network;Application;
 +Categories=GTK;GNOME;Network;
++MimeType=application/x-rdp
  Encoding=UTF-8
  
  [Desktop Action Full]
