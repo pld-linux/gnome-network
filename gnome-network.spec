@@ -12,12 +12,12 @@ Group:		X11/Applications
 # Source0-md5:	3c8bb27a941b7132a27880e6ebb1e771
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-network/1.99/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-no_zvt.patch
-BuildRequires:	autoconf
-BuildRequires:	automake
-BuildRequires:	libglade2
-BuildRequires:	libgnomeui
 URL:		http://www.gnome.org/
 Icon:		gnome-network.xpm
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libglade2-devel
+BuildRequires:	libgnomeui-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
 
@@ -60,15 +60,21 @@ glib-gettextize --copy --force
 %{__aclocal} -I %{_aclocaldir}/gnome2-macros
 %{__autoconf}
 %{__automake}
-%configure
+%configure \
+	--with-ifconfig="/sbin/ifconfig" \
+	--with-netstat="/bin/netstat" \
+	--with-ping="/bin/ping" \
+	--with-tcptraceroute="/usr/sbin/tcptraceroute" \
+	--with-vncviewer="/usr/bin/vncviewer" \
+	--with-xnest="/usr/X11R6/bin/Xnest"
 
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} DESTDIR=$RPM_BUILD_ROOT \
-	install
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %find_lang %{name}
 
@@ -79,7 +85,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/applications/*
 %{_datadir}/gnome-backup
 %{_datadir}/gnome-network
 %{_datadir}/gnome-remote-desktop
+%{_desktopdir}/*
