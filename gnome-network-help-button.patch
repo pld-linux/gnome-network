@@ -1,0 +1,90 @@
+diff -Nuard gnome-network-1.99.2.orig/network-utilities/ChangeLog gnome-network-1.99.2/network-utilities/ChangeLog
+--- gnome-network-1.99.2.orig/network-utilities/ChangeLog	2003-10-06 10:15:00.000000000 +0200
++++ gnome-network-1.99.2/network-utilities/ChangeLog	2003-11-19 23:22:00.211511584 +0100
+@@ -1,3 +1,8 @@
++2003-11-18  Mason Kidd <mrkidd@mrkidd.com>
++
++	* gnome-remote-shell.c (dialog_response_cb, display_about) Added about dialog and 
++	connected to the Help button.
++
+ 2003-10-03  Carlos Garcia Campos <carlosgc@gnome.org>
+ 
+ 	* gnome-remote-shell.c (check_network_status, validate_host,
+diff -Nuard gnome-network-1.99.2.orig/network-utilities/gnome-remote-shell.c gnome-network-1.99.2/network-utilities/gnome-remote-shell.c
+--- gnome-network-1.99.2.orig/network-utilities/gnome-remote-shell.c	2003-10-06 10:15:00.000000000 +0200
++++ gnome-network-1.99.2/network-utilities/gnome-remote-shell.c	2003-11-19 23:19:38.603039344 +0100
+@@ -57,6 +57,7 @@
+ 
+ void	dialog_destroyed_cb (GtkWidget *widget, gpointer user_data);
+ void	dialog_response_cb (GtkDialog *dialog, gint response_id, gpointer user_data);
++void	display_about (void);
+ void	entry_activate_cb (GtkWidget *widget, gpointer user_data);
+ void	port_default_toggled_cb (GtkToggleButton *button, gpointer user_data);
+ void	radio_button_toggled_cb (GtkToggleButton *button, gpointer user_data);
+@@ -76,10 +77,62 @@
+ void
+ dialog_response_cb (GtkDialog *dialog, gint response_id, gpointer user_data)
+ {
+-	if (response_id == GTK_RESPONSE_OK)
+-		activate_shell ();
+-	else 
+-		gtk_widget_destroy (GTK_WIDGET (dialog));
++	switch (response_id)
++	{
++		case GTK_RESPONSE_OK:
++			activate_shell ();
++			break;
++		case GTK_RESPONSE_CANCEL:
++			gtk_widget_destroy (GTK_WIDGET (dialog));
++			break;
++		case GTK_RESPONSE_HELP:
++			display_about ();
++			break;
++	}
++}
++
++void
++display_about (void)
++{
++        static GtkWidget *about_box = NULL;
++        GdkPixbuf *pixbuf = NULL;
++	gchar *filename = NULL;
++        const gchar *authors[] = {
++                "Rodrigo Moya <rodrigo@gnome-db.org>",
++		NULL
++        };
++        const gchar *documentors[] = { NULL };
++        const gchar copyright[1024];
++                                                                                                    
++        g_sprintf (copyright, "Copyright \xc2\xa9 2003 %s", "Rodrigo Moya");
++                                                                                                    
++        if (about_box != NULL) {
++                gtk_window_present (GTK_WINDOW (about_box));
++                return;
++        }
++	
++                                                                                                    
++	filename = g_build_filename (GNOME_ICONDIR, "gnome-remote-shell.png", NULL);
++	if (filename != NULL) 
++	{
++		pixbuf = gdk_pixbuf_new_from_file (filename, NULL);
++		g_free (filename);
++	}
++                                                                                                    
++        about_box = gnome_about_new ("GNOME Remote Shell",
++                                     VERSION,
++                                     copyright,
++                                     _
++                                     ("Graphical user interface for opening remote shells"),
++                                     authors, documentors,
++                                     _("This is an untranslated version of GNOME Remote Shell"),
++                                     pixbuf);
++        if (pixbuf != NULL)
++                g_object_unref (pixbuf);
++
++	gtk_window_set_transient_for (GTK_WINDOW (about_box), GTK_WINDOW (dialog));
++        g_signal_connect (G_OBJECT (about_box), "destroy", G_CALLBACK (gtk_widget_destroyed), &about_box);
++        gtk_widget_show (about_box);
+ }
+ 
+ void
