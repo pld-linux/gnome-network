@@ -16,6 +16,7 @@ Patch1:		%{name}-help-button.patch
 Patch2:		%{name}-desktop.patch
 Patch3:		%{name}-locale_names.patch
 Patch4:		%{name}-ac.patch
+Patch5:		%{name}-netinfo.patch
 URL:		http://www.gnome.org/
 Icon:		gnome-network.xpm
 BuildRequires:	GConf2-devel >= 2.4.0
@@ -71,6 +72,7 @@ GNOME - програми роботи з мережею.
 %patch2 -p1
 %patch3 -p1
 %patch4 -p0
+%patch5 -p0
 
 mv -f po/{no,nb}.po
 
