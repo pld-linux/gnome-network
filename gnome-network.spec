@@ -1,13 +1,14 @@
 Summary:	GNOME network programs
 Name:		gnome-network
 Version:	1.0.2
-Release:	2
+Release:	3
 License:	GPL
-Group:		X11/GNOME
-Group(pl):	X11/GNOME
+Group:		X11/Applications
+Group(de):	X11/Applikationen
+Group(pl):	X11/Aplikacje
 Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-network/%{name}-%{version}.tar.gz
-Patch0:		gnome-network-applnk.patch
-BuildRequires:	gnome-libs >= 1.0.0
+Patch0:		%{name}-applnk.patch
+BuildRequires:	gnome-libs >= 1.2.0
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-objc-devel
 BuildRequires:	gnome-core-devel
@@ -34,8 +35,7 @@ your computer easy, powerful, and easy to configure.
 %patch -p1
 
 %build
-export OBJC=gcc
-LDFLAGS="-s"; export LDFLAGS
+OBJC="%{__cc}"; export OBJC
 gettextize --copy --force
 automake
 %configure
@@ -47,6 +47,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
 
 gzip -9nf AUTHORS ChangeLog NEWS README
+
 %find_lang %{name}
 
 %clean
