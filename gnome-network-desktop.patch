@@ -1,0 +1,182 @@
+diff -ur gnome-network-1.0.2.orig/gmailman/gmailman.desktop gnome-network-1.0.2/gmailman/gmailman.desktop
+--- gnome-network-1.0.2.orig/gmailman/gmailman.desktop	Tue Apr  6 19:04:31 1999
++++ gnome-network-1.0.2/gmailman/gmailman.desktop	Mon Dec 29 13:01:58 2003
+@@ -1,18 +1,21 @@
+ [Desktop Entry]
+ Name=GNOME Mailman
+-Name[es]=Gnome Mailman
++Name[es]=GNOME Mailman
+ Name[fr]=GNOME Mailman
+-Name[ko]=±×³ğ ¿ìÃ¼ºÎ
+-Name[no]=Gnome Mailman
++Name[ko]=ê·¸ë†ˆ ìš°ì²´ë¶€
++Name[no]=GNOME Mailman
+ Name[pt]=GNOME MailMan
+ Name[wa]=GNOME MailMan
+ Comment=GNOME Mailing List Subscription Manager
+-Comment[es]=Gestor de suscripción a listas de difusión
++Comment[es]=Gestor de suscripciÃ³n a listas de difusiÃ³n
+ Comment[fr]=Gestionnaire GNOME d'inscriptions aux listes de diffusion
+-Comment[ko]=±×³ğ ¸ŞÀÏ¸µ ¸®½ºÆ® °¡ÀÔ °ü¸®ÀÚ
+-Comment[no]=Holder styr på maillinglistene
+-Comment[pt]=Gestor GNOME de subscrições a "mailing lists"
+-Comment[wa]=Manaedjeu de subscripcions ås djåspinreyes
++Comment[ko]=ê·¸ë†ˆ ë©”ì¼ë§ ë¦¬ìŠ¤íŠ¸ ê°€ì… ê´€ë¦¬ì
++Comment[no]=Holder styr pÃ¥ maillinglistene
++Comment[pl]=ZarzÄ…dca subskrybowanych list pocztowych dla GNOME
++Comment[pt]=Gestor GNOME de subscriÃ§Ãµes a "mailing lists"
++Comment[wa]=Manaedjeu de subscripcions Ã¥s djÃ¥spinreyes
+ Exec=gmailman
+-Terminal=0
++Terminal=pl
+ Type=Application
++Encoding=UTF-8
++# vi: encoding=utf-8
+diff -ur gnome-network-1.0.2.orig/gnome-ppp/gnome-ppp-applet/ppp-applet.desktop gnome-network-1.0.2/gnome-ppp/gnome-ppp-applet/ppp-applet.desktop
+--- gnome-network-1.0.2.orig/gnome-ppp/gnome-ppp-applet/ppp-applet.desktop	Tue Apr 13 00:31:18 1999
++++ gnome-network-1.0.2/gnome-ppp/gnome-ppp-applet/ppp-applet.desktop	Mon Dec 29 12:59:12 2003
+@@ -1,25 +1,27 @@
+ [Desktop Entry]
+ Name=PPP Applet
+-Name[ja]=PPP¥À¥¤¥ä¥é¡¼
+ Name[es]=Discador PPP
+-Name[hu]=PPP tárcsázó
+-Name[ko]=PPP °É±â
+-Name[no]=PPP-oppringing
+-Name[pl]=Po³±czenie PPP
+-Name[fr]=Numéroteur PPP
+-Name[pt]=Ligação PPP
++Name[fr]=NumÃ©roteur PPP
++Name[hu]=PPP tÃ¡rcsÃ¡zÃ³
++Name[ja]=PPPãƒ€ã‚¤ãƒ¤ãƒ©ãƒ¼
++Name[ko]=PPP ê±¸ê¸°
+ Name[nl]=PPP connector
++Name[no]=PPP-oppringing
++Name[pl]=PoÅ‚Ä…czenie PPP
++Name[pt]=LigaÃ§Ã£o PPP
+ Comment=PPP Dialer
+-Comment[ja]=PPP¥À¥¤¥ä¥é¡¼
+-Comment[es]=Inicia/termina una conexión PPP
+-Comment[hu]=Egy PPP-tárcsázó applet
+-Comment[ko]=PPP °É±â
+-Comment[no]=Program for PPP-oppringing
+-Comment[pl]=Obs³uga po³aczenia PPP
+-Comment[fr]=Numéroteur PPP GNOME
+-Comment[pt]=Efectua uma ligação PPP
++Comment[es]=Inicia/termina una conexiÃ³n PPP
++Comment[fr]=NumÃ©roteur PPP GNOME
++Comment[hu]=Egy PPP-tÃ¡rcsÃ¡zÃ³ applet
++Comment[ja]=PPPãƒ€ã‚¤ãƒ¤ãƒ©ãƒ¼
++Comment[ko]=PPP ê±¸ê¸°
+ Comment[nl]=PPP connector
++Comment[no]=Program for PPP-oppringing
++Comment[pl]=ObsÅ‚uga poÅ‚aczenia PPP
++Comment[pt]=Efectua uma ligaÃ§Ã£o PPP
+ Exec=ppp_applet --activate-goad-server=PPP_Applet
+ Icon=
+-Terminal=0
++Terminal=false
+ Type=Application
++Encoding=UTF-8
++# vi: encoding=utf-8
+diff -ur gnome-network-1.0.2.orig/gnome-ppp/gnome-ppp.desktop gnome-network-1.0.2/gnome-ppp/gnome-ppp.desktop
+--- gnome-network-1.0.2.orig/gnome-ppp/gnome-ppp.desktop	Tue Apr  6 19:04:35 1999
++++ gnome-network-1.0.2/gnome-ppp/gnome-ppp.desktop	Mon Dec 29 13:04:33 2003
+@@ -3,19 +3,23 @@
+ Name[de]=PPP Verbindungaufbau
+ Name[es]=Gnome PPP
+ Name[fr]=Utilitaire de connection PPP
+-Name[ko]=PPP °É±â
+-Name[no]=PPP-oppringingsverktøy
+-Name[pt]=Utilitário para efectuar ligações PPP
++Name[ko]=PPP ê±¸ê¸°
++Name[no]=PPP-oppringingsverktÃ¸y
++Name[pl]=Program do ³±czno¶ci PPP
++Name[pt]=UtilitÃ¡rio para efectuar ligaÃ§Ãµes PPP
+ Name[wa]=Raloyaedje PPP
+ Comment=GNOME PPP dialup utility
+ Comment[de]=Verwaltung von PPP Verbindungen
+-Comment[es]=Utilería para conectarse a través de PPP
++Comment[es]=UtilerÃ­a para conectarse a travÃ©s de PPP
+ Comment[fr]=Utilitaire de connexion PPP GNOME
+-Comment[ko]=±×³ğ PPP ÀüÈ­°É±â ÇÁ·Î±×·¥
+-Comment[no]=Verktøy for oppretting av PPP-forbindelser
+-Comment[pt]=Utilitário GNOME para efectuar ligações PPP
+-Comment[wa]=Usteye di GNOME po si raloyî al rantoele daegnrece avou PPP
++Comment[ko]=ê·¸ë†ˆ PPP ì „í™”ê±¸ê¸° í”„ë¡œê·¸ë¨
++Comment[no]=VerktÃ¸y for oppretting av PPP-forbindelser
++Comment[pl]=Program do ³±czno¶ci PPP dla GNOME
++Comment[pt]=UtilitÃ¡rio GNOME para efectuar ligaÃ§Ãµes PPP
++Comment[wa]=Usteye di GNOME po si raloyÃ® al rantoele daegnrece avou PPP
+ Exec=gnome-ppp
+ Icon=gnome-networktool.png
+-Terminal=0
++Terminal=false
+ Type=Application
++Encoding=UTF-8
++# vi: encoding=utf-8
+diff -ur gnome-network-1.0.2.orig/gnometalk/gtalk.desktop gnome-network-1.0.2/gnometalk/gtalk.desktop
+--- gnome-network-1.0.2.orig/gnometalk/gtalk.desktop	Wed Dec 30 22:09:22 1998
++++ gnome-network-1.0.2/gnometalk/gtalk.desktop	Mon Dec 29 13:06:17 2003
+@@ -1,19 +1,21 @@
+ [Desktop Entry]
+ Name=Talk
+-Name[es]=Talk
+ Name[de]=Talk
+-Name[ko]=´ëÈ­ÇÏ±â
++Name[es]=Talk
+ Name[fr]=Talk
++Name[ko]=ëŒ€í™”í•˜ê¸°
+ Name[no]=Talk
+ Name[pt]=Talk
+-Comment=Gnome Talk
+-Comment[es]=Cliente de conversación `talk' de Gnome
+-Comment[de]=Gnome Talk Programm
+-Comment[ko]=±×³ğ ´ëÈ­ ÇÁ·Î±×·¥
++Comment=GNOME Talk
++Comment[de]=GNOME Talk Programm
++Comment[es]=Cliente de conversaciÃ³n `talk' de GNOME
+ Comment[fr]=GNOME Talk
+-Comment[no]=Gnome talk
++Comment[ko]=ê·¸ë†ˆ ëŒ€í™” í”„ë¡œê·¸ë¨
++Comment[no]=GNOME talk
+ Comment[pt]=GNOME Talk
+ Exec=gtalk
+ Icon=gnome-talk.png
+-Terminal=0
++Terminal=false
+ Type=Application
++Encoding=UTF-8
++# vi: encoding=utf-8
+diff -ur gnome-network-1.0.2.orig/sync/gnome-sync.desktop gnome-network-1.0.2/sync/gnome-sync.desktop
+--- gnome-network-1.0.2.orig/sync/gnome-sync.desktop	Fri Feb 26 12:09:29 1999
++++ gnome-network-1.0.2/sync/gnome-sync.desktop	Mon Dec 29 13:09:25 2003
+@@ -1,16 +1,20 @@
+ [Desktop Entry]
+ Name=Synchronize
+-Name[es]=Sincronización de archivos
++Name[es]=SincronizaciÃ³n de archivos
+ Name[fr]=Synchronisation
+-Name[ko]=µ¿±âÈ­
+-Name[pt]=Sincronização
++Name[ko]=ë™ê¸°í™”
+ Name[no]=Synkronisering
++Name[pl]=Synchronizacja
++Name[pt]=SincronizaÃ§Ã£o
+ Comment=Desktop synchronization application
+-Comment[es]=Aplicación de sincronización de archivos
++Comment[es]=AplicaciÃ³n de sincronizaciÃ³n de archivos
+ Comment[fr]=Application de synchronisation du bureau
+-Comment[ko]=µ¥½ºÅ©Å¾ µ¿±âÈ­ ÇÁ·Î±×·¥
+-Comment[pt]=Aplicação de sincronização de ficheiros
+-Commenr[no]=Applikasjon for synkronisering av skrivebordet
++Comment[ko]=ë°ìŠ¤í¬íƒ‘ ë™ê¸°í™” í”„ë¡œê·¸ë¨
++Comment[no]=Applikasjon for synkronisering av skrivebordet
++Comment[pl]=Program do synchronizacji plikÃ³w
++Comment[pt]=AplicaÃ§Ã£o de sincronizaÃ§Ã£o de ficheiros
+ Exec=gnome-sync
+-Terminal=0
++Terminal=false
+ Type=Application
++Encoding=UTF-8
++# vi: encoding=utf-8
