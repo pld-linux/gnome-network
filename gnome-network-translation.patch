@@ -1372,7 +1372,7 @@ diff -Nuard gnome-network-1.99.4.orig/po/gnome-network.pot gnome-network-1.99.4/
 -msgstr ""
 diff -Nuard gnome-network-1.99.4.orig/po/pl.po gnome-network-1.99.4/po/pl.po
 --- gnome-network-1.99.4.orig/po/pl.po	2003-11-25 16:59:45.000000000 +0100
-+++ gnome-network-1.99.4/po/pl.po	2003-11-27 00:24:38.441198688 +0100
++++ gnome-network-1.99.4/po/pl.po	2003-11-27 00:44:06.346650072 +0100
 @@ -10,7 +10,7 @@
  msgstr ""
  "Project-Id-Version: gnome-network\n"
@@ -1430,7 +1430,18 @@ diff -Nuard gnome-network-1.99.4.orig/po/pl.po gnome-network-1.99.4/po/pl.po
  
  #: desktop/client/src/connect.c:380 desktop/client/src/connect.c:637
  msgid ""
-@@ -124,10 +108,9 @@
+@@ -115,19 +99,18 @@
+ #.
+ #: desktop/client/src/connect.c:410
+ msgid "Prof_ile Launcher:"
+-msgstr ""
++msgstr "Prof_il"
+ 
+ #: desktop/client/src/connect.c:423
+ msgid "Select a saved profile to launch it immediately."
+-msgstr ""
++msgstr "Wybierz zapisany profil"
+ 
  #: desktop/client/src/connect.c:455
  #, fuzzy
  msgid "_More"
@@ -1475,7 +1486,21 @@ diff -Nuard gnome-network-1.99.4.orig/po/pl.po gnome-network-1.99.4/po/pl.po
  
  #: desktop/client/src/connect.c:715
  msgid ""
-@@ -241,19 +224,19 @@
+@@ -225,11 +208,11 @@
+ 
+ #: desktop/client/src/connect.c:782
+ msgid "Operate in full screen mode"
+-msgstr ""
++msgstr "Pracuj w trybie pełnoekranowym"
+ 
+ #: desktop/client/src/connect.c:786
+ msgid "Work in full screen mode."
+-msgstr ""
++msgstr "Pracuj w trybie pełnoekranowym"
+ 
+ #: desktop/client/src/connect.c:795
+ msgid "Use alternate full screen switch (-F)"
+@@ -241,61 +224,63 @@
  
  #: desktop/client/src/connect.c:808 desktop/client/src/connect.c:810
  msgid "Colors"
@@ -1499,7 +1524,33 @@ diff -Nuard gnome-network-1.99.4.orig/po/pl.po gnome-network-1.99.4/po/pl.po
  
  #: desktop/client/src/connect.c:841
  msgid "Use the list to choose the color depth to use."
-@@ -281,15 +264,15 @@
+-msgstr ""
++msgstr "Wybierz głębię kolorów z listy"
+ 
+ #: desktop/client/src/connect.c:865
+ msgid "Remote Computer _Sound"
+-msgstr ""
++msgstr "_Dźwięk w zdalnym komputerze"
+ 
+ #: desktop/client/src/connect.c:867
+ msgid "Remote Computer Sound"
+-msgstr ""
++msgstr "Dźwięk w zdalnym komputerze"
+ 
+ #: desktop/client/src/connect.c:891 desktop/client/src/connect.c:927
+ msgid "On the local computer"
+-msgstr ""
++msgstr "Lokalny komputer"
+ 
+ #: desktop/client/src/connect.c:894 desktop/client/src/connect.c:930
+ msgid "On the remote computer"
+-msgstr ""
++msgstr "Zdalny komputer"
+ 
+ #: desktop/client/src/connect.c:897
+ msgid "Do not play"
+-msgstr ""
++msgstr "Nie odgrywaj"
  
  #: desktop/client/src/connect.c:908
  msgid "_Keyboard"
@@ -1518,7 +1569,15 @@ diff -Nuard gnome-network-1.99.4.orig/po/pl.po gnome-network-1.99.4/po/pl.po
  
  #: desktop/client/src/connect.c:939
  msgid ""
-@@ -305,7 +288,7 @@
+ "Use the following keyboard language\n"
+ "(2 char keycode)"
+ msgstr ""
++"Używaj podanego układu klawiatury"
++"(dwuznakowy kod)"
+ 
+ #: desktop/client/src/connect.c:967
+ msgid ""
+@@ -305,43 +290,43 @@
  
  #: desktop/client/src/connect.c:990 desktop/client/src/connect.c:992
  msgid "Start a Program"
@@ -1527,7 +1586,18 @@ diff -Nuard gnome-network-1.99.4.orig/po/pl.po gnome-network-1.99.4/po/pl.po
  
  #: desktop/client/src/connect.c:1007
  msgid "Start the following program on connection"
-@@ -321,7 +304,7 @@
+-msgstr ""
++msgstr "Uruchom ten program po połączeniu"
+ 
+ #: desktop/client/src/connect.c:1014
+ msgid "Program path and filename"
+-msgstr ""
++msgstr "Ścieżka do programu"
+ 
+ #: desktop/client/src/connect.c:1027
+ msgid "Start in the following folder"
+-msgstr ""
++msgstr "Uruchom w podanym katalogu"
  
  #: desktop/client/src/connect.c:1049 desktop/client/src/connect.c:1051
  msgid "Optimize Performance"
@@ -1536,7 +1606,57 @@ diff -Nuard gnome-network-1.99.4.orig/po/pl.po gnome-network-1.99.4/po/pl.po
  
  #: desktop/client/src/connect.c:1072
  msgid "Desktop background (u)"
-@@ -373,15 +356,15 @@
+-msgstr ""
++msgstr "Tło pulpitu"
+ 
+ #: desktop/client/src/connect.c:1076
+ msgid "Show content of window while dragging (u)"
+-msgstr ""
++msgstr "Pokazuj zawartość okna podczas przenoszenia (u)"
+ 
+ #: desktop/client/src/connect.c:1080
+ msgid "Menu and window animation (u)"
+-msgstr ""
++msgstr "Animacja okien i menu (u)"
+ 
+ #: desktop/client/src/connect.c:1084
+ msgid "Themes (u)"
+-msgstr ""
++msgstr "Motywy (u)"
+ 
+ #: desktop/client/src/connect.c:1088
+ msgid "Enable bitmap caching"
+-msgstr ""
++msgstr "Włącz bufor bitmap"
+ 
+ #: desktop/client/src/connect.c:1092
+ msgid "Do not send motion events"
+@@ -349,7 +334,7 @@
+ 
+ #: desktop/client/src/connect.c:1096
+ msgid "Enable window manager's key bindings"
+-msgstr ""
++msgstr "Włącz skróty klawiszowe menadżera okien"
+ 
+ #: desktop/client/src/connect.c:1101
+ msgid "Options available for optimizing performance"
+@@ -360,36 +345,36 @@
+ #.
+ #: desktop/client/src/connect.c:1114
+ msgid "_General"
+-msgstr ""
++msgstr "_Głowne"
+ 
+ #: desktop/client/src/connect.c:1119
+ #, fuzzy
+ msgid "_Display"
+-msgstr "Ekran"
++msgstr "_Ekran"
+ 
+ #: desktop/client/src/connect.c:1124
+ msgid "Local _Resources"
+-msgstr ""
++msgstr "Lokalne _Zasoby"
  
  #: desktop/client/src/connect.c:1129
  msgid "_Programs"
@@ -1555,10 +1675,22 @@ diff -Nuard gnome-network-1.99.4.orig/po/pl.po gnome-network-1.99.4/po/pl.po
  
  #: desktop/client/src/connect.c:1709
  msgid "Input a filename to save as..."
-@@ -432,95 +415,6 @@
- msgid "An error has occurred."
- msgstr ""
+-msgstr ""
++msgstr "Zapisz jako plik ..."
  
+ #: desktop/client/src/connect.c:1751 desktop/client/src/connect.c:1796
+ msgid "Choose an RDP file to open..."
+-msgstr ""
++msgstr "Wybierz plik RDP do otwarcia"
+ 
+ #: desktop/client/src/support.c:277
+ msgid ""
+@@ -430,96 +415,7 @@
+ 
+ #: desktop/client/src/support.c:750 desktop/client/src/support.c:756
+ msgid "An error has occurred."
+-msgstr ""
+-
 -#: desktop/data/gnome-desktop-sharing.schemas.in.h:1
 -msgid "Check this to enable desktop sharing in GNOME"
 -msgstr ""
@@ -1647,11 +1779,11 @@ diff -Nuard gnome-network-1.99.4.orig/po/pl.po gnome-network-1.99.4/po/pl.po
 -#: desktop/gnome-remote-desktop.glade.h:17
 -msgid "by"
 -msgstr "przez"
--
++msgstr "Wystąpił błąd"
+ 
  #: desktop/preferences/interface.c:48 desktop/preferences/interface.c:63
  #: desktop/server/tray.c:170
- #, fuzzy
-@@ -529,11 +423,11 @@
+@@ -529,19 +425,21 @@
  
  #: desktop/preferences/interface.c:72
  msgid "_Share my desktop with others"
@@ -1665,16 +1797,18 @@ diff -Nuard gnome-network-1.99.4.orig/po/pl.po gnome-network-1.99.4/po/pl.po
  
  #: desktop/preferences/interface.c:93
  msgid ""
-@@ -541,7 +435,7 @@
+ "The following information will need to be supplied by the user connecting to "
  "your desktop"
  msgstr ""
++"Poniższe dane będą musiały zostać podane przez osobę łączącą się"
++"do twojego pulpitu"
  
 -#: desktop/preferences/interface.c:104 gnome-ppp/account-window.c:1023
 +#: desktop/preferences/interface.c:104
  msgid "Password"
  msgstr "Hasło"
  
-@@ -561,7 +455,7 @@
+@@ -561,7 +459,7 @@
  
  #: desktop/server/tray.c:104
  msgid "Your desktop is viewable to others"
@@ -1683,7 +1817,7 @@ diff -Nuard gnome-network-1.99.4.orig/po/pl.po gnome-network-1.99.4/po/pl.po
  
  #: desktop/server/tray.c:160
  msgid "translator_credits"
-@@ -581,338 +475,6 @@
+@@ -581,338 +479,6 @@
  msgid "This is an untranslated version of GNOME Network Information"
  msgstr "To jest nieprzetłumaczona wersja informacji sieciowych GNOME"
  
@@ -2022,7 +2156,7 @@ diff -Nuard gnome-network-1.99.4.orig/po/pl.po gnome-network-1.99.4/po/pl.po
  #: gnome-netinfo/info.c:252
  msgid "Active"
  msgstr "Aktywny"
-@@ -957,7 +519,7 @@
+@@ -957,7 +523,7 @@
  #: gnome-netinfo/info.c:395
  #, c-format
  msgid "Broadcast:\t%s\n"
@@ -2031,7 +2165,7 @@ diff -Nuard gnome-network-1.99.4.orig/po/pl.po gnome-network-1.99.4/po/pl.po
  
  #: gnome-netinfo/info.c:396
  #, c-format
-@@ -1004,8 +566,11 @@
+@@ -1004,8 +570,11 @@
  msgid "Collisions:\t%s\n"
  msgstr "Kolizje:\t%s\n"
  
@@ -2045,7 +2179,7 @@ diff -Nuard gnome-network-1.99.4.orig/po/pl.po gnome-network-1.99.4/po/pl.po
  msgid "Name"
  msgstr "Nazwa"
  
-@@ -1044,6 +609,35 @@
+@@ -1044,6 +613,35 @@
  "Plik \"%s\" nie istnieje, sprawdź czy program gnome-netinfo został poprawnie "
  "zainstalowany"
  
@@ -2081,7 +2215,7 @@ diff -Nuard gnome-network-1.99.4.orig/po/pl.po gnome-network-1.99.4/po/pl.po
  #: gnome-netinfo/netinfo.c:128
  #, fuzzy
  msgid "Network address not specified"
-@@ -1090,8 +684,7 @@
+@@ -1090,8 +688,7 @@
  msgid "Gateway"
  msgstr "Bramka"
  
@@ -2091,7 +2225,7 @@ diff -Nuard gnome-network-1.99.4.orig/po/pl.po gnome-network-1.99.4/po/pl.po
  msgid "Netmask"
  msgstr "Maska sieci"
  
-@@ -1238,848 +831,873 @@
+@@ -1238,848 +835,873 @@
  msgid "%s: Command not found"
  msgstr "%s: Nie odnaleziono polecenia"
  
