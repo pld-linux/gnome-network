@@ -5,26 +5,21 @@ Summary(pt_BR):	Programas de rede do GNOME
 Summary(ru):	GNOME - программы работы с сетью
 Summary(uk):	GNOME - програми роботи з мережею
 Name:		gnome-network
-Version:	1.0.2
-Release:	5
+Version:	1.99.0
+Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/gnome-network/1.0/%{name}-%{version}.tar.gz
-Patch0:		%{name}-applnk.patch
-Patch1:		%{name}-GNU_GETTEXT.patch
+# Source0-md5:	3c8bb27a941b7132a27880e6ebb1e771
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-network/1.99/%{name}-%{version}.tar.bz2
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
-BuildRequires:	gnome-core-devel
-BuildRequires:	gnome-libs-devel >= 1.2.0
-BuildRequires:	gnome-objc-devel
+BuildRequires:	libglade
+BuildRequires:	libgnomeui
+BuildRequires:	libzvt
 URL:		http://www.gnome.org/
 Icon:		gnome-network.xpm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
-
-%define		_sysconfdir	/etc/X11/GNOME
-%define		_localstatedir	/var/lib
 
 %description
 GNOME network programs.
@@ -57,25 +52,21 @@ GNOME - програми роботи з мережею.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
 
 %build
-#rm -rf missing
-OBJC="%{__cc}"; export OBJC
-install /usr/share/automake/config.* .
-%{__gettextize}
-%{__aclocal} -I macros
-#autoconf
-#automake -a -c
-%configure2_13
+rm -rf missing
+glib-gettextize --copy --force
+%{__aclocal} -I %{_aclocaldir}/gnome2-macros
+%{__autoconf}
+%{__automake}
+%configure
+
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT \
-	Networkdir=%{_applnkdir}/Network/Misc \
 	install
 
 %find_lang %{name}
@@ -87,7 +78,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
-%{_applnkdir}/Network/*/*
-%{_pixmapsdir}/*
-%{_datadir}/gnome/help/gnome-ppp
-%{_sysconfdir}/CORBA/servers/*.goad
+%{_datadir}/applications/*
+%{_datadir}/gnome-backup
+%{_datadir}/gnome-network
+%{_datadir}/gnome-remote-desktop
