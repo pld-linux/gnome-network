@@ -39,7 +39,7 @@ LDFLAGS="-s"; export LDFLAGS
 gettextize --copy --force
 automake
 %configure
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
