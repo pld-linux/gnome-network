@@ -11,11 +11,11 @@ License:	GPL
 Group:		X11/Applications
 # Source0-md5:	3c8bb27a941b7132a27880e6ebb1e771
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-network/1.99/%{name}-%{version}.tar.bz2
+Patch0:		%{name}-no_zvt.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libglade
+BuildRequires:	libglade2
 BuildRequires:	libgnomeui
-BuildRequires:	libzvt
 URL:		http://www.gnome.org/
 Icon:		gnome-network.xpm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -52,6 +52,7 @@ GNOME - програми роботи з мережею.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 rm -rf missing
