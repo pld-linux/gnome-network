@@ -20,7 +20,7 @@ Icon:		gnome-network.xpm
 BuildRequires:	GConf2-devel >= 2.4.0
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gnome-common
+BuildRequires:	gnome-common >= 2.8.0
 BuildRequires:	gnome-panel-devel >= 2.4.0
 BuildRequires:	libglade2-devel
 BuildRequires:	libgnomeui-devel >= 2.4.0
@@ -75,7 +75,7 @@ mv -f po/{no,nb}.po
 %build
 rm -rf missing
 glib-gettextize --copy --force
-%{__aclocal} -I %{_aclocaldir}/gnome2-macros
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure \
