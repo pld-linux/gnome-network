@@ -6,7 +6,7 @@ Summary(pt_BR):	Programas de rede do GNOME
 Summary(es):	Programas de red del GNOME
 Name:		gnome-network
 Version:	1.0.2
-Release:	4
+Release:	5
 License:	GPL
 Group:		X11/Applications
 Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-network/%{name}-%{version}.tar.gz
@@ -66,6 +66,7 @@ configurar.
 %build
 #rm -rf missing
 OBJC="%{__cc}"; export OBJC
+install /usr/share/automake/config.* .
 gettextize --copy --force
 aclocal -I macros
 #autoconf
@@ -94,3 +95,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_applnkdir}/Network/*/*
 %{_pixmapsdir}/*
 %{_datadir}/gnome/help/gnome-ppp
+%{_sysconfdir}/CORBA/servers/*.goad
