@@ -49,14 +49,14 @@ GNOME - –“œ«“¡ÕÕŸ “¡¬œ‘Ÿ ” ”≈‘ÿ¿.
 Programas de rede do GNOME
 
 GNOME È o Ambiente de Rede Modelado por Objetos da GNU. … um nome
-fantasioso, mas o GNOME È realmente um bom ambiente gr·fico. Ele
-torna seu computador f·cil, poderoso e f·cil de configurar.
+fantasioso, mas o GNOME È realmente um bom ambiente gr·fico. Ele torna
+seu computador f·cil, poderoso e f·cil de configurar.
 
 %description -l es
-Programas de red del GNOME GNOME es el Ambiente de Red Modelado
-por Objetos de la GNU. Es un nombre fantasioso, pero GNOME es
-realmente un buen ambiente gr·fico. Hace tu ordenador sencillo,
-potente y f·cil de configurar.
+Programas de red del GNOME GNOME es el Ambiente de Red Modelado por
+Objetos de la GNU. Es un nombre fantasioso, pero GNOME es realmente un
+buen ambiente gr·fico. Hace tu ordenador sencillo, potente y f·cil de
+configurar.
 
 %prep
 %setup -q
