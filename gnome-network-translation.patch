@@ -1,5 +1,5 @@
-diff -Nuard gnome-network-1.99.4.orig/po/gnome-network.pot gnome-network-1.99.4/po/gnome-network.pot
---- gnome-network-1.99.4.orig/po/gnome-network.pot	2003-11-25 16:59:39.000000000 +0100
+diff -Nuard gnome-network-1.99.4.origa/po/gnome-network.pot gnome-network-1.99.4/po/gnome-network.pot
+--- gnome-network-1.99.4.origa/po/gnome-network.pot	2003-11-25 16:59:39.000000000 +0100
 +++ gnome-network-1.99.4/po/gnome-network.pot	2003-11-27 00:14:00.000000000 +0100
 @@ -8,7 +8,7 @@
  msgstr ""
@@ -1370,8 +1370,8 @@ diff -Nuard gnome-network-1.99.4.orig/po/gnome-network.pot gnome-network-1.99.4/
 -#: sync/main.c:190
 -msgid "Delete selected entries"
 -msgstr ""
-diff -Nuard gnome-network-1.99.4.orig/po/pl.po gnome-network-1.99.4/po/pl.po
---- gnome-network-1.99.4.orig/po/pl.po	2003-11-25 16:59:45.000000000 +0100
+diff -Nuard gnome-network-1.99.4.origa/po/pl.po gnome-network-1.99.4/po/pl.po
+--- gnome-network-1.99.4.origa/po/pl.po	2003-11-25 16:59:45.000000000 +0100
 +++ gnome-network-1.99.4/po/pl.po	2003-11-27 00:44:06.346650072 +0100
 @@ -10,7 +10,7 @@
  msgstr ""
@@ -3743,8 +3743,8 @@ diff -Nuard gnome-network-1.99.4.orig/po/pl.po gnome-network-1.99.4/po/pl.po
  
  #~ msgid "You don't have the Xnest program installed in the system"
  #~ msgstr "W systemie brak zainstalowanego programu Xnest"
-diff -Nuard gnome-network-1.99.4.orig/po/POTFILES.in gnome-network-1.99.4/po/POTFILES.in
---- gnome-network-1.99.4.orig/po/POTFILES.in	2003-11-21 17:45:52.000000000 +0100
+diff -Nuard gnome-network-1.99.4.origa/po/POTFILES.in gnome-network-1.99.4/po/POTFILES.in
+--- gnome-network-1.99.4.origa/po/POTFILES.in	2003-11-21 17:45:52.000000000 +0100
 +++ gnome-network-1.99.4/po/POTFILES.in	2003-11-27 00:13:53.000000000 +0100
 @@ -1,12 +1,9 @@
  # List of source files containing translatable strings.

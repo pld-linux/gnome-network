@@ -1,5 +1,5 @@
-diff -Nuard gnome-network-1.99.4.orig/configure.in gnome-network-1.99.4/configure.in
---- gnome-network-1.99.4.orig/configure.in	2003-11-25 16:57:17.000000000 +0100
+diff -Nuard gnome-network-1.99.4.origa/configure.in gnome-network-1.99.4/configure.in
+--- gnome-network-1.99.4.origa/configure.in	2003-11-25 16:57:17.000000000 +0100
 +++ gnome-network-1.99.4/configure.in	2003-11-26 23:10:08.510731408 +0100
 @@ -38,8 +38,15 @@
  
@@ -19,8 +19,8 @@ diff -Nuard gnome-network-1.99.4.orig/configure.in gnome-network-1.99.4/configur
  
  PKG_CHECK_MODULES(ZVT, libzvt-2.0, have_zvt=yes, have_zvt=no)
  AM_CONDITIONAL(HAVE_LIBZVT, test "x$have_zvt" = "xyes")
-diff -Nuard gnome-network-1.99.4.orig/desktop/server/Makefile.am gnome-network-1.99.4/desktop/server/Makefile.am
---- gnome-network-1.99.4.orig/desktop/server/Makefile.am	2003-11-25 18:53:29.000000000 +0100
+diff -Nuard gnome-network-1.99.4.origa/desktop/server/Makefile.am gnome-network-1.99.4/desktop/server/Makefile.am
+--- gnome-network-1.99.4.origa/desktop/server/Makefile.am	2003-11-25 18:53:29.000000000 +0100
 +++ gnome-network-1.99.4/desktop/server/Makefile.am	2003-11-26 23:14:19.740538672 +0100
 @@ -1,8 +1,6 @@
  ## Process this file with automake to produce Makefile.in
