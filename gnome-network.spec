@@ -6,7 +6,7 @@ Summary(pt_BR):	Programas de rede do GNOME
 Summary(es):	Programas de red del GNOME
 Name:		gnome-network
 Version:	1.0.2
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Applications
 Group(de):	X11/Applikationen
