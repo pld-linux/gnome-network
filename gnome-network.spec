@@ -6,7 +6,7 @@ Summary(ru):	GNOME - программы работы с сетью
 Summary(uk):	GNOME - програми роботи з мережею
 Name:		gnome-network
 Version:	1.99.2
-Release:	4
+Release:	5
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-network/1.99/%{name}-%{version}.tar.bz2
@@ -100,6 +100,13 @@ mv $RPM_BUILD_ROOT%{_datadir}/gnome/apps/*/* $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post
+umask 022
+[ ! -x /usr/bin/update-desktop-database ] || /usr/bin/update-desktop-database >/dev/null 2>&1 ||:
+
+%postun
+[ ! -x /usr/bin/update-desktop-database ] || /usr/bin/update-desktop-database >/dev/null 2>&1
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
