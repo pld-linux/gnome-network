@@ -67,7 +67,7 @@ configurar.
 #rm -rf missing
 OBJC="%{__cc}"; export OBJC
 install /usr/share/automake/config.* .
-gettextize --copy --force
+%{__gettextize}
 aclocal -I macros
 #autoconf
 #automake -a -c
