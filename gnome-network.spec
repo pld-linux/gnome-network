@@ -5,12 +5,12 @@ Summary(pt_BR):	Programas de rede do GNOME
 Summary(ru):	GNOME - программы работы с сетью
 Summary(uk):	GNOME - програми роботи з мережею
 Name:		gnome-network
-Version:	1.99.3
+Version:	1.99.4
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/1.99/%{name}-%{version}.tar.bz2
-# Source0-md5:	62c696c510831efd0057d6ae085a4c65
+# Source0-md5:	aa7ff4260d871f9f7b9a5133ece15b05
 Patch0:		%{name}-no_zvt.patch
 Patch1:		%{name}-help-button.patch
 Patch2:		%{name}-schemas_install.patch
@@ -23,7 +23,6 @@ BuildRequires:	gnome-common
 BuildRequires:	gnome-panel-devel >= 2.4.0
 BuildRequires:	libglade2-devel >= 2.0.1
 BuildRequires:	libgnomeui-devel >= 2.4.0
-Requires(post):	GConf2
 #Requires:	bind-utils
 #Requires:	bsd-finger
 #Requires:	iputils
@@ -85,30 +84,23 @@ glib-gettextize --copy --force
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_datadir}/gnome/capplets
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 mv $RPM_BUILD_ROOT%{_datadir}/gnome/apps/*/* $RPM_BUILD_ROOT%{_desktopdir}
-mv $RPM_BUILD_ROOT%{_datadir}/control-center-2.0/capplets/*.desktop $RPM_BUILD_ROOT%{_datadir}/gnome/capplets
 
 %find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post
-%gconf_schema_install
-
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
-%{_sysconfdir}/gconf/schemas/*.schemas
 %{_datadir}/gnome-network
 %{_desktopdir}/*
 %{_pixmapsdir}/*
 %{_datadir}/application-registry/*
 %{_datadir}/mime-info/*
-%{_datadir}/gnome/capplets/*.desktop
