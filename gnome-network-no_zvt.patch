@@ -1,14 +1,14 @@
 diff -Nru gnome-network-1.99.0.orig/configure.in gnome-network-1.99.0/configure.in
 --- gnome-network-1.99.0.orig/configure.in	2003-06-03 01:25:01.000000000 +0200
 +++ gnome-network-1.99.0/configure.in	2003-06-04 10:10:49.000000000 +0200
-@@ -41,10 +41,6 @@
- AC_CHECK_HEADERS(rfb/rfb.h rfb.h, have_rfb=yes)
- AM_CONDITIONAL(RFB, test "x$have_rfb" != "x")
- 
+@@ -29,10 +29,6 @@
+ dnl
+ dnl Checks libraries
+ dnl
 -PKG_CHECK_MODULES(ZVT, libzvt-2.0, have_zvt=yes, have_zvt=no)
 -AM_CONDITIONAL(HAVE_LIBZVT, test "x$have_zvt" = "xyes")
 -AC_SUBST(ZVT_CFLAGS)
 -AC_SUBST(ZVT_LIBS)
  
- PKG_CHECK_MODULES(GNETWORK, libgnomeui-2.0 libgnome-2.0 gtk+-2.0 glib-2.0 libglade-2.0 gconf-2.0)
+ PKG_CHECK_MODULES(GNETWORK, libgnomeui-2.0 libgnome-2.0 gtk+-2.0 glib-2.0 libglade-2.0)
  AC_SUBST(GNETWORK_CFLAGS)
