@@ -1,7 +1,7 @@
 Summary:	GNOME network programs
 Name:		gnome-network
 Version:	1.0.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/GNOME
 Group(pl):	X11/GNOME
@@ -56,6 +56,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz
 %attr(755,root,root) %{_bindir}/*
-%{_applnkdir}/*
+%{_applnkdir}/Network/*/*
 %{_datadir}/pixmaps/*
 %{_datadir}/gnome/help/gnome-ppp
