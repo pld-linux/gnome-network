@@ -5,8 +5,8 @@ Release:	1
 License:	GPL
 Group:		X11/GNOME
 Group(pl):	X11/GNOME
-Source:		ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-network/%{name}-%{version}.tar.gz
-Patch:		gnome-network-applnk.patch
+Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-network/%{name}-%{version}.tar.gz
+Patch0:		gnome-network-applnk.patch
 BuildRequires:	gnome-libs >= 1.0.0
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-objc-devel
@@ -25,9 +25,9 @@ Obsoletes:	gnome
 %description
 GNOME network programs.
 
-GNOME is the GNU Network Object Model Environment. That's a fancy name but
-really GNOME is a nice GUI desktop environment. It makes using your computer
-easy, powerful, and easy to configure.
+GNOME is the GNU Network Object Model Environment. That's a fancy name
+but really GNOME is a nice GUI desktop environment. It makes using
+your computer easy, powerful, and easy to configure.
 
 %prep
 %setup -q
