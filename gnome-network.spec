@@ -6,14 +6,16 @@ Summary(pt_BR):	Programas de rede do GNOME
 Summary(es):	Programas de red del GNOME
 Name:		gnome-network
 Version:	1.0.2
-Release:	4
+Release:	5
 License:	GPL
 Group:		X11/Applications
 Group(de):	X11/Applikationen
 Group(pl):	X11/Aplikacje
-Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-network/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/gnome-network/1.0/%{name}-%{version}.tar.gz
+# Source0-md5:	d573b83101bdd395d5e0817b64de42cb
 Patch0:		%{name}-applnk.patch
 Patch1:		%{name}-GNU_GETTEXT.patch
+Patch2:		%{name}-desktop.patch
 BuildRequires:	gnome-libs >= 1.2.0
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-objc-devel
@@ -64,6 +66,7 @@ potente y fácil de configurar.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 #rm -rf missing
