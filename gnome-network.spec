@@ -5,19 +5,19 @@ Summary(pt_BR):	Programas de rede do GNOME
 Summary(ru):	GNOME - программы работы с сетью
 Summary(uk):	GNOME - програми роботи з мережею
 Name:		gnome-network
-Version:	1.99.0
-Release:	2
+Version:	1.99.1
+Release:	1
 License:	GPL
 Group:		X11/Applications
-# Source0-md5:	3c8bb27a941b7132a27880e6ebb1e771
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-network/1.99/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/1.99/%{name}-%{version}.tar.bz2
+# Source0-md5:	e5e4bbff44b972ea782bd764c4e07151
 Patch0:		%{name}-no_zvt.patch
 URL:		http://www.gnome.org/
 Icon:		gnome-network.xpm
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libglade2-devel
-BuildRequires:	libgnomeui-devel >= 2.3.3.1-2
+BuildRequires:	libgnomeui-devel >= 2.3.7
 Obsoletes:	gnome
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -85,7 +85,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/gnome-backup
 %{_datadir}/gnome-network
 %{_datadir}/gnome-remote-desktop
 %{_desktopdir}/*
+%{_pixmapsdir}/*
