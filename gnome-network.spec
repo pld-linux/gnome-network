@@ -58,5 +58,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz
 %attr(755,root,root) %{_bindir}/*
 %{_applnkdir}/Network/*/*
-%{_datadir}/pixmaps/*
+%{_pixmapsdir}/*
 %{_datadir}/gnome/help/gnome-ppp
