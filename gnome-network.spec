@@ -6,7 +6,7 @@ Summary(ru):	GNOME - программы работы с сетью
 Summary(uk):	GNOME - програми роботи з мережею
 Name:		gnome-network
 Version:	1.99.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 # Source0-md5:	3c8bb27a941b7132a27880e6ebb1e771
@@ -17,9 +17,9 @@ Icon:		gnome-network.xpm
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libglade2-devel
-BuildRequires:	libgnomeui-devel
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRequires:	libgnomeui-devel >= 2.3.3.1-2
 Obsoletes:	gnome
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 GNOME network programs.
