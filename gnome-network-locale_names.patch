@@ -1,0 +1,22 @@
+--- gnome-network-1.99.2/configure.in~	Tue Jul 27 20:46:41 2004
++++ gnome-network-1.99.2/configure.in	Tue Jul 27 20:46:41 2004
+@@ -112,7 +112,7 @@
+ GETTEXT_PACKAGE=gnome-network
+ AC_SUBST(GETTEXT_PACKAGE)
+ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE",[The gettext package])
+-ALL_LINGUAS="az ca cs da de es fr ga gl he hu it ja ko nl no pl pt pt_BR ru sr sr@Latn sv tr uk vi wa zh_CN zh_TW"
++ALL_LINGUAS="az ca cs da de es fr ga gl he hu it ja ko nb nl pl pt pt_BR ru sr sr@Latn sv tr uk vi wa zh_CN zh_TW"
+ AM_GLIB_GNU_GETTEXT
+ 
+ AC_SUBST(CFLAGS)
+--- gnome-network-1.99.2/configure~	Tue Jul 27 20:46:36 2004
++++ gnome-network-1.99.2/configure	Tue Jul 27 20:46:36 2004
+@@ -20303,7 +20303,7 @@
+ #define GETTEXT_PACKAGE "$GETTEXT_PACKAGE"
+ _ACEOF
+ 
+-ALL_LINGUAS="az ca cs da de es fr ga gl he hu it ja ko nl no pl pt pt_BR ru sr sr@Latn sv tr uk vi wa zh_CN zh_TW"
++ALL_LINGUAS="az ca cs da de es fr ga gl he hu it ja ko nb nl pl pt pt_BR ru sr sr@Latn sv tr uk vi wa zh_CN zh_TW"
+ 
+ 
+ for ac_header in locale.h
