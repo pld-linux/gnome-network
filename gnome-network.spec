@@ -5,18 +5,14 @@ Summary(pt_BR):	Programas de rede do GNOME
 Summary(ru):	GNOME - программы работы с сетью
 Summary(uk):	GNOME - програми роботи з мережею
 Name:		gnome-network
-Version:	1.99.4
-Release:	1
+Version:	1.99.2
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/1.99/%{name}-%{version}.tar.bz2
-# Source0-md5:	aa7ff4260d871f9f7b9a5133ece15b05
+# Source0-md5:	ba71a10c0606379ac80d1d0a24555a41
 Patch0:		%{name}-no_zvt.patch
 Patch1:		%{name}-help-button.patch
-Patch2:		%{name}-schemas_install.patch
-Patch3:		%{name}-libvncserver.patch
-Patch4:		%{name}-icon.patch
-Patch5:		%{name}-translation.patch
 URL:		http://www.gnome.org/
 Icon:		gnome-network.xpm
 BuildRequires:	GConf2-devel >= 2.4.0
@@ -24,9 +20,8 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gnome-common
 BuildRequires:	gnome-panel-devel >= 2.4.0
-BuildRequires:	libglade2-devel >= 2.0.1
+BuildRequires:	libglade2-devel
 BuildRequires:	libgnomeui-devel >= 2.4.0
-BuildRequires:	libvncserver-devel >= 0.6
 #Requires:	bind-utils
 #Requires:	bsd-finger
 #Requires:	iputils
@@ -70,10 +65,6 @@ GNOME - програми роботи з мережею.
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
-%patch3 -p1
-%patch4 -p1
-%patch5 -p1
 
 %build
 rm -rf missing
@@ -82,7 +73,6 @@ glib-gettextize --copy --force
 %{__autoconf}
 %{__automake}
 %configure \
-	--disable-schemas-install \
 	--with-ifconfig="/sbin/ifconfig" \
 	--with-vncviewer="/usr/bin/vncviewer" \
 	--with-xnest="/usr/X11R6/bin/Xnest"
@@ -97,10 +87,6 @@ rm -rf $RPM_BUILD_ROOT
 
 mv $RPM_BUILD_ROOT%{_datadir}/gnome/apps/*/* $RPM_BUILD_ROOT%{_desktopdir}
 
-install -d $RPM_BUILD_ROOT%{_datadir}/gnome/capplets
-mv -f $RPM_BUILD_ROOT%{_datadir}/control-center-2.0/capplets/*.desktop $RPM_BUILD_ROOT%{_datadir}/gnome/capplets
-
-
 %find_lang %{name}
 
 %clean
@@ -110,10 +96,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
-%{_sysconfdir}/gconf/schemas/*
 %{_datadir}/gnome-network
-%{_datadir}/mime-info/*
-%{_datadir}/application-registry/*
-%{_datadir}/gnome/capplets/*.desktop
 %{_desktopdir}/*
 %{_pixmapsdir}/*
+%{_datadir}/application-registry/*
+%{_datadir}/mime-info/*
