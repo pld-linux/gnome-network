@@ -22,7 +22,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gnome-common
 BuildRequires:	gnome-panel-devel >= 2.5.1
-BuildRequires:	libglade2-devel >= 2.3.1
+BuildRequires:	libglade2-devel >= 1:2.3.1
 BuildRequires:	libgnomeui-devel >= 2.5.1
 BuildRequires:	libvncserver-devel >= 0.6
 #Requires:	bind-utils
