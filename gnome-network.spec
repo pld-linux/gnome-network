@@ -23,7 +23,6 @@ BuildRequires:	gnome-common
 BuildRequires:	gnome-panel-devel >= 2.4.0
 BuildRequires:	libglade2-devel >= 2.0.1
 BuildRequires:	libgnomeui-devel >= 2.4.0
-BuildRequires:	libzvt-devel
 #Requires:	bind-utils
 #Requires:	bsd-finger
 #Requires:	iputils
