@@ -5,26 +5,28 @@ Summary(pt_BR):	Programas de rede do GNOME
 Summary(ru):	GNOME - программы работы с сетью
 Summary(uk):	GNOME - програми роботи з мережею
 Name:		gnome-network
-Version:	1.99.1
-Release:	2
+Version:	1.99.2
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/1.99/%{name}-%{version}.tar.bz2
-# Source0-md5:	e5e4bbff44b972ea782bd764c4e07151
+# Source0-md5:	ba71a10c0606379ac80d1d0a24555a41
 Patch0:		%{name}-no_zvt.patch
 URL:		http://www.gnome.org/
 Icon:		gnome-network.xpm
+BuildRequires:	GConf2-devel >= 2.4.0
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gnome-panel-devel >= 2.4.0
 BuildRequires:	libglade2-devel
-BuildRequires:	libgnomeui-devel >= 2.3.7
-Requires:	vnc-client
-Requires:	ssh-clients
-Requires:	bind-utils
-Requires:	bsd-finger
-Requires:	net-tools
-Requires:	iputils
-Requires:	telnet
+BuildRequires:	libgnomeui-devel >= 2.4.0
+#Requires:	bind-utils
+#Requires:	bsd-finger
+#Requires:	iputils
+#Requires:	net-tools
+#Requires:	ssh-clients
+#Requires:	telnet
+#Requires:	vnc-client
 Obsoletes:	gnome
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -69,9 +71,6 @@ glib-gettextize --copy --force
 %{__automake}
 %configure \
 	--with-ifconfig="/sbin/ifconfig" \
-	--with-netstat="/bin/netstat" \
-	--with-ping="/bin/ping" \
-	--with-tcptraceroute="/usr/sbin/tcptraceroute" \
 	--with-vncviewer="/usr/bin/vncviewer" \
 	--with-xnest="/usr/X11R6/bin/Xnest"
 
@@ -83,6 +82,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+mv $RPM_BUILD_ROOT%{_datadir}/gnome/apps/*/* $RPM_BUILD_ROOT%{_desktopdir}
+
 %find_lang %{name}
 
 %clean
@@ -93,6 +94,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/gnome-network
-%{_datadir}/gnome-remote-desktop
 %{_desktopdir}/*
 %{_pixmapsdir}/*
+%{_datadir}/application-registry/*
+%{_datadir}/mime-info/*
