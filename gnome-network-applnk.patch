@@ -1,0 +1,43 @@
+diff -Nru gnome-network-1.0.2/gmailman/Makefile.am gnome-network-1.0.2.new/gmailman/Makefile.am
+--- gnome-network-1.0.2/gmailman/Makefile.am	Tue Mar  2 00:23:11 1999
++++ gnome-network-1.0.2.new/gmailman/Makefile.am	Fri Jan 28 22:17:13 2000
+@@ -41,5 +41,5 @@
+         $(OBGNOME_LIBS) $(OBGTK_LIBS) $(GNOMEUI_LIBS) \
+         $(OBJC_LIBS) $(GNOME_LIBDIR) $(INTLLIBS)
+ 
+-netdir = $(datadir)/gnome/apps/Internet
++netdir = $(datadir)/applnk/Internet
+ net_DATA = gmailman.desktop
+diff -Nru gnome-network-1.0.2/gnome-ppp/Makefile.am gnome-network-1.0.2.new/gnome-ppp/Makefile.am
+--- gnome-network-1.0.2/gnome-ppp/Makefile.am	Mon Apr 26 11:01:02 1999
++++ gnome-network-1.0.2.new/gnome-ppp/Makefile.am	Fri Jan 28 22:17:29 2000
+@@ -24,7 +24,7 @@
+ gnome_ppp_LDADD = $(LDADD)	\
+ 	$(top_builddir)/gnome-ppp/libgnome_ppp/libgnome_ppp.a
+ 
+-Networkdir = $(datadir)/gnome/apps/Internet
++Networkdir = $(datadir)/applnk/Internet
+ Network_DATA = gnome-ppp.desktop
+ 
+ EXTRA_DIST = $(Network_DATA)
+diff -Nru gnome-network-1.0.2/gnometalk/Makefile.am gnome-network-1.0.2.new/gnometalk/Makefile.am
+--- gnome-network-1.0.2/gnometalk/Makefile.am	Thu Feb 25 21:14:37 1999
++++ gnome-network-1.0.2.new/gnometalk/Makefile.am	Fri Jan 28 22:17:58 2000
+@@ -28,5 +28,5 @@
+ pixmap_DATA =
+ EXTRA_DIST  = $(pixmap_DATA) gtalk.desktop
+ 
+-Networkdir = $(datadir)/gnome/apps/Internet
++Networkdir = $(datadir)/applnk/Internet
+ Network_DATA = gtalk.desktop
+diff -Nru gnome-network-1.0.2/sync/Makefile.am gnome-network-1.0.2.new/sync/Makefile.am
+--- gnome-network-1.0.2/sync/Makefile.am	Thu Feb 25 21:14:38 1999
++++ gnome-network-1.0.2.new/sync/Makefile.am	Fri Jan 28 22:18:12 2000
+@@ -12,6 +12,6 @@
+ ## updated.
+ gnome_sync_LDADD = $(GNOME_LIBDIR) $(GNOMEUI_LIBS) $(INTLLIBS)
+ 
+-Networkdir = $(datadir)/gnome/apps/Internet
++Networkdir = $(datadir)/applnk/Internet
+ Network_DATA = gnome-sync.desktop
+ EXTRA_DIST = $(Network_DATA)
