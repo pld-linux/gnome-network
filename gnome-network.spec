@@ -14,6 +14,9 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/1.99/%{name}-%{version}.
 Patch0:		%{name}-no_zvt.patch
 Patch1:		%{name}-help-button.patch
 Patch2:		%{name}-schemas_install.patch
+Patch3:		%{name}-libvncserver.patch
+Patch4:		%{name}-icon.patch
+Patch5:		%{name}-translation.patch
 URL:		http://www.gnome.org/
 Icon:		gnome-network.xpm
 BuildRequires:	GConf2-devel >= 2.4.0
@@ -23,6 +26,7 @@ BuildRequires:	gnome-common
 BuildRequires:	gnome-panel-devel >= 2.4.0
 BuildRequires:	libglade2-devel >= 2.0.1
 BuildRequires:	libgnomeui-devel >= 2.4.0
+BuildRequires:	libvncserver-devel >= 0.6
 #Requires:	bind-utils
 #Requires:	bsd-finger
 #Requires:	iputils
@@ -67,6 +71,9 @@ GNOME - програми роботи з мережею.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
+%patch4 -p1
+%patch5 -p1
 
 %build
 rm -rf missing
@@ -90,6 +97,10 @@ rm -rf $RPM_BUILD_ROOT
 
 mv $RPM_BUILD_ROOT%{_datadir}/gnome/apps/*/* $RPM_BUILD_ROOT%{_desktopdir}
 
+install -d $RPM_BUILD_ROOT%{_datadir}/gnome/capplets
+mv -f $RPM_BUILD_ROOT%{_datadir}/control-center-2.0/capplets/*.desktop $RPM_BUILD_ROOT%{_datadir}/gnome/capplets
+
+
 %find_lang %{name}
 
 %clean
@@ -99,8 +110,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
+%{_sysconfdir}/gconf/schemas/*
 %{_datadir}/gnome-network
+%{_datadir}/mime-info/*
+%{_datadir}/application-registry/*
+%{_datadir}/gnome/capplets/*.desktop
 %{_desktopdir}/*
 %{_pixmapsdir}/*
-%{_datadir}/application-registry/*
-%{_datadir}/mime-info/*
