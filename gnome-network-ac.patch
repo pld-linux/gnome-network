@@ -1,0 +1,11 @@
+--- configure.in.a	2005-01-10 14:52:52.780437336 +0100
++++ configure.in	2005-01-10 14:52:56.811824472 +0100
+@@ -7,8 +7,6 @@
+ 
+ AC_PROG_INTLTOOL([0.11])
+ 
+-GNOME_PLATFORM_GNOME_2(yes, force)
+-
+ AC_ISC_POSIX
+ AC_PROG_CC
+ AC_STDC_HEADERS
