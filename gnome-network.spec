@@ -6,7 +6,7 @@ Summary(ru):	GNOME - программы работы с сетью
 Summary(uk):	GNOME - програми роботи з мережею
 Name:		gnome-network
 Version:	1.99.2
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/1.99/%{name}-%{version}.tar.bz2
@@ -15,6 +15,7 @@ Patch0:		%{name}-no_zvt.patch
 Patch1:		%{name}-help-button.patch
 Patch2:		%{name}-desktop.patch
 Patch3:		%{name}-locale_names.patch
+Patch4:		%{name}-ac.patch
 URL:		http://www.gnome.org/
 Icon:		gnome-network.xpm
 BuildRequires:	GConf2-devel >= 2.4.0
@@ -69,6 +70,7 @@ GNOME - програми роботи з мережею.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p0
 
 mv -f po/{no,nb}.po
 
