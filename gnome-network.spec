@@ -18,7 +18,6 @@ Patch3:		%{name}-locale_names.patch
 Patch4:		%{name}-ac.patch
 Patch5:		%{name}-netinfo.patch
 URL:		http://www.gnome.org/
-Icon:		gnome-network.xpm
 BuildRequires:	GConf2-devel >= 2.4.0
 BuildRequires:	autoconf
 BuildRequires:	automake
