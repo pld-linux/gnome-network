@@ -113,7 +113,7 @@ umask 022
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/gnome-network
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
 %{_pixmapsdir}/*
 %{_datadir}/application-registry/*
 %{_datadir}/mime-info/*
