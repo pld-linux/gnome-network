@@ -1,9 +1,9 @@
 Summary:	GNOME network programs
-Summary(es):	Programas de red del GNOME
-Summary(pl):	GNOME - programy sieciowe
-Summary(pt_BR):	Programas de rede do GNOME
-Summary(ru):	GNOME - –“œ«“¡ÕÕŸ “¡¬œ‘Ÿ ” ”≈‘ÿ¿
-Summary(uk):	GNOME - –“œ«“¡Õ… “œ¬œ‘… ⁄ Õ≈“≈÷≈¿
+Summary(es.UTF-8):   Programas de red del GNOME
+Summary(pl.UTF-8):   GNOME - programy sieciowe
+Summary(pt_BR.UTF-8):   Programas de rede do GNOME
+Summary(ru.UTF-8):   GNOME - –ø—Ä–æ–≥—Ä–∞–º–º—ã —Ä–∞–±–æ—Ç—ã —Å —Å–µ—Ç—å—é
+Summary(uk.UTF-8):   GNOME - –ø—Ä–æ–≥—Ä–∞–º–∏ —Ä–æ–±–æ—Ç–∏ –∑ –º–µ—Ä–µ–∂–µ—é
 Name:		gnome-network
 Version:	1.99.5
 Release:	1
@@ -42,27 +42,27 @@ GNOME is the GNU Network Object Model Environment. That's a fancy name
 but really GNOME is a nice GUI desktop environment. It makes using
 your computer easy, powerful, and easy to configure.
 
-%description -l es
+%description -l es.UTF-8
 Programas de red del GNOME GNOME es el Ambiente de Red Modelado por
 Objetos de la GNU. Es un nombre fantasioso, pero GNOME es realmente un
-buen ambiente gr·fico. Hace tu ordenador sencillo, potente y f·cil de
+buen ambiente gr√°fico. Hace tu ordenador sencillo, potente y f√°cil de
 configurar.
 
-%description -l pl
+%description -l pl.UTF-8
 Programy sieciowe dla GNOME.
 
-%description -l pt_BR
+%description -l pt_BR.UTF-8
 Programas de rede do GNOME
 
-GNOME È o Ambiente de Rede Modelado por Objetos da GNU. … um nome
-fantasioso, mas o GNOME È realmente um bom ambiente gr·fico. Ele torna
-seu computador f·cil, poderoso e f·cil de configurar.
+GNOME √© o Ambiente de Rede Modelado por Objetos da GNU. √â um nome
+fantasioso, mas o GNOME √© realmente um bom ambiente gr√°fico. Ele torna
+seu computador f√°cil, poderoso e f√°cil de configurar.
 
-%description -l ru
-GNOME - –“œ«“¡ÕÕŸ “¡¬œ‘Ÿ ” ”≈‘ÿ¿.
+%description -l ru.UTF-8
+GNOME - –ø—Ä–æ–≥—Ä–∞–º–º—ã —Ä–∞–±–æ—Ç—ã —Å —Å–µ—Ç—å—é.
 
-%description -l uk
-GNOME - –“œ«“¡Õ… “œ¬œ‘… ⁄ Õ≈“≈÷≈¿.
+%description -l uk.UTF-8
+GNOME - –ø—Ä–æ–≥—Ä–∞–º–∏ —Ä–æ–±–æ—Ç–∏ –∑ –º–µ—Ä–µ–∂–µ—é.
 
 %prep
 %setup -q
