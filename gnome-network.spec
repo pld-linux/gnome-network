@@ -1,9 +1,9 @@
 Summary:	GNOME network programs
-Summary(es.UTF-8):   Programas de red del GNOME
-Summary(pl.UTF-8):   GNOME - programy sieciowe
-Summary(pt_BR.UTF-8):   Programas de rede do GNOME
-Summary(ru.UTF-8):   GNOME - программы работы с сетью
-Summary(uk.UTF-8):   GNOME - програми роботи з мережею
+Summary(es.UTF-8):	Programas de red del GNOME
+Summary(pl.UTF-8):	GNOME - programy sieciowe
+Summary(pt_BR.UTF-8):	Programas de rede do GNOME
+Summary(ru.UTF-8):	GNOME - программы работы с сетью
+Summary(uk.UTF-8):	GNOME - програми роботи з мережею
 Name:		gnome-network
 Version:	1.99.2
 Release:	6
