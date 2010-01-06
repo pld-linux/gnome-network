@@ -21,10 +21,14 @@ URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.4.0
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	gnome-common >= 2.8.0
 BuildRequires:	gnome-panel-devel >= 2.4.0
+BuildRequires:	intltool
 BuildRequires:	libglade2-devel
 BuildRequires:	libgnomeui-devel >= 2.10.0-2
+BuildRequires:	libtool
+BuildRequires:	pkgconfig
 #Requires:	bind-utils
 #Requires:	bsd-finger
 #Requires:	iputils
@@ -76,13 +80,15 @@ GNOME - програми роботи з мережею.
 mv -f po/{no,nb}.po
 
 %build
-glib-gettextize --copy --force
+%{__glib_gettextize}
+%{__intltoolize}
+%{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure \
 	--with-ifconfig="/sbin/ifconfig" \
-	--with-vncviewer="/usr/bin/vncviewer" \
+	--with-vncviewer="%{_bindir}/vncviewer" \
 	--with-xnest="/usr/X11R6/bin/Xnest"
 
 %{__make}
@@ -102,11 +108,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 umask 022
-[ ! -x /usr/bin/update-desktop-database ] || /usr/bin/update-desktop-database >/dev/null 2>&1 ||:
+[ ! -x %{_bindir}/update-desktop-database ] || %{_bindir}/update-desktop-database >/dev/null 2>&1 ||:
 
 %postun
 umask 022
-[ ! -x /usr/bin/update-desktop-database ] || /usr/bin/update-desktop-database >/dev/null 2>&1
+[ ! -x %{_bindir}/update-desktop-database ] || %{_bindir}/update-desktop-database >/dev/null 2>&1
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
